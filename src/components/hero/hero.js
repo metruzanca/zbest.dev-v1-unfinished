@@ -24,9 +24,7 @@ class Hero extends React.Component{
                             </g>
                     </svg>anca</span>.</h1>
                     <h1>I'm a Full-Stack JS Developer.</h1>
-                </div>
-                <div className="call-to-action" style={action}>
-                    Read More ↓
+                    <h1 style={{color:"#DF054F"}}> Site Under Construction.</h1>
                 </div>
             </div>
         )
