@@ -41,7 +41,7 @@ plan.remote(remote => {
   remote.rm(`-rf /tmp/${tmpDir}`);
  
   // remote.log('Reload application');
-  remote.sudo(`ln -snf ~/${tmpDir} zbest.dev/`, {user: user, silent: true});
+  remote.sudo(`ln -snf ~/${tmpDir} zbest.dev`, {user: user, silent: true});
   // remote.sudo('pm2 reload example-com', {user: user});
 });
  
