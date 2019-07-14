@@ -6,12 +6,10 @@ const btnResume = (e) =>{
     
 }
 
-// TODO: Intersection Observer
-
 class NavBar extends React.Component{
     render(){
         return(
-            <header>
+            <header id='header'>
                 <a href="/" id="logo">
                     <svg className="nav-logo" xmlns="http://www.w3.org/2000/svg" width="25.644" height="41.27" viewBox="0 0 25.644 41.27">
                         <g id="Group_87" data-name="Group 87" transform="translate(0)">

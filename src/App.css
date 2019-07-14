@@ -1,5 +1,7 @@
 body{
   background-color: #211E31;
+  background: url("/img/hero.jpg") fixed no-repeat;
+  background-size: cover;
   color: white;
   /*Disables horrizontal scroll*/
   max-width: 100%;

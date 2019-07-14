@@ -1,16 +1,21 @@
 .hero-section{
-  background: url("/img/hero.jpg") fixed no-repeat;
   height: 100vh;
-  background-size: cover;
+  /*background-size: cover;*/
   display: flex;
   justify-content: center;
   align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: -100;
+  /*position: sticky;*/
+  /*top: 0;*/
+  /*z-index: -100;*/
 }
 
-.hero-section .hero-headers h1{
+#background{
+  /*background: url("/img/hero.jpg") fixed no-repeat;*/
+}
+
+.hero-section .hero-headers h1,
+.hero-section .hero-headers h2
+{
     
     margin: 0;
     text-shadow: 2px 2px 6px #000;
@@ -26,4 +31,8 @@
 
 h1{
   font-size: 2.5em;
+}
+
+h2{
+  font-size: 2.0em;
 }

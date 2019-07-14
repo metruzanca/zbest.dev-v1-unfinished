@@ -8,33 +8,33 @@ header{
   --header-bg: transparent;
 }
 
+.nav-scrolled{
+  background-color: #2f1f38;
+}
+
 header {
   position: fixed;
   z-index: 100;
   width: 100%;
   place-items: center;
+  height: 50px;
 }
 
-/* header{
-  border-bottom: 5px solid #6057E5;
-  background-color: var(--header-bg);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  width: 100%;
-  bottom: 0;
-  height: 7vh;
-}
-
-.header-logo{
+/*.nav-logo{
   margin: 10px 20px;
-}
+}*/
 
-nav{
-  position: fixed;
-  top: 0;
+/*nav{
   display: inline-block;
-} */
+}*/
+
+
+#social{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 30px;
+  justify-content: center;
+} 
 
 nav ul {
   padding: 0;
@@ -50,7 +50,7 @@ nav a{
   color: #C5C1B9;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 nav .current a, .highlight {
