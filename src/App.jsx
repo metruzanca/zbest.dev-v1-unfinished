@@ -1,13 +1,15 @@
 import React from 'react';
 import './App.css';
 import NavBar from './components/navbar/navbar';
-import Hero from './components/hero/hero'
+import Hero from './components/hero/hero';
+import Bar from './components/bar/bar';
 
 function App() {
   return (
     <div className="App">
-      <Hero/>
       <NavBar/>
+      <Hero/>
+      <Bar/>
       <div className="content">
       </div>
       <div className="contact">
