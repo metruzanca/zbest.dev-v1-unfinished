@@ -1,14 +1,14 @@
 import React from 'react';
 import './hero.css';
 
-const action = {
-    color: "#80FFCF",
-    border: "2px solid #80FFCF",
-    borderRadius: "10%",
-    padding: "20px",
-    fontSize:"1.25rem"
+// const action = {
+//     color: "#80FFCF",
+//     border: "2px solid #80FFCF",
+//     borderRadius: "10%",
+//     padding: "20px",
+//     fontSize:"1.25rem"
 
-}
+// }
 
 class Hero extends React.Component{
     render(){
