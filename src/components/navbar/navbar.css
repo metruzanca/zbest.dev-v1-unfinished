@@ -4,12 +4,12 @@
 }
 
 /* CSS Variables */
-header{
+/* header{
   --header-bg: transparent;
-}
+} */
 
 .nav-scrolled{
-  background-color: #2f1f38;
+  background-color: #2f294d;
 }
 
 header {
