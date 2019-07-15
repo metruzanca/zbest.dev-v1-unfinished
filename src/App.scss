@@ -1,3 +1,8 @@
+/* CSS Variables */
+* {
+  --text-primary: #C5C1B9;
+}
+
 body{
   background-color: #211E31;
   background: url("/img/hero.jpg") fixed no-repeat;
@@ -32,7 +37,7 @@ body{
   background: rgba(0,0,0,0.5)
 }
 
-.footer{
+footer{
   background-color: #211E31;
   height: 30vh;
 }
