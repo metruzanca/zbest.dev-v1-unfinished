@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Filter = () => {
+const ProjectGrid = () => {
     return (
         <div></div>
     );
 }
 
-export default Filter;
+export default ProjectGrid;
