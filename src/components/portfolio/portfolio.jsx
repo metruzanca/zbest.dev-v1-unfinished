@@ -9,7 +9,7 @@ const portfolio = () => {
 
     return (
         <div className="content">
-            something
+            Portfolio
         </div>
     )
 }

@@ -14,14 +14,12 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      nav: 'nav-about',
+      nav: 'nav-home',
     };
   }
 
   monitor = (inView, entry) => {
     if (entry.isIntersecting) {
-      // this.setState(nav)
-      // console.log(entry.target.id);
       this.setState({
         nav: `nav-${entry.target.id}`
       })
@@ -50,7 +48,7 @@ class App extends React.Component {
           <Portfolio/>
         </InView>
         <InView as="div" id="about" onChange={this.monitor} className="content">
-          me
+          About me
         </InView>
         <InView as="div" id="contact" onChange={this.monitor}>
           <Contact/>
