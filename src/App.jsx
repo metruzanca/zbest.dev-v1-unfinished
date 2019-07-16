@@ -8,6 +8,7 @@ import Contact from './components/contact/contact';
 
 import { InView } from 'react-intersection-observer';
 
+const threshold = 0;//.5;
 
 class App extends React.Component {
 
@@ -23,10 +24,11 @@ class App extends React.Component {
       this.setState({
         nav: `nav-${entry.target.id}`
       })
+      console.log('Entering: ' + entry.target.id);
     }
   }
 
-  monitorHero = (inView, entry) => {
+  monitorNav = (inView, entry) => {
     const nav = document.getElementById('header');
     if (!inView) {
       nav.classList.add('nav-scrolled');
@@ -40,17 +42,17 @@ class App extends React.Component {
     return (
       <div className="App">
         <NavBar page={this.state.nav}/>
-        <InView as="div" id="home" className="hero-section" onChange={this.monitorHero}>
+        <InView threshold={0} as="div" id="home" className="hero-section" onChange={this.monitorNav}>
           <Hero />
         </InView>
         <Bar/>
-        <InView as="div" id="portfolio" onChange={this.monitor}>
+        <InView threshold={threshold} as="div" id="portfolio" onChange={this.monitor}>
           <Portfolio/>
         </InView>
-        <InView as="div" id="about" onChange={this.monitor} className="content">
+        <InView threshold={threshold} as="div" id="about" onChange={this.monitor} className="content">
           About me
         </InView>
-        <InView as="div" id="contact" onChange={this.monitor}>
+        <InView threshold={threshold} as="div" id="contact" onChange={this.monitor}>
           <Contact/>
         </InView>
   
