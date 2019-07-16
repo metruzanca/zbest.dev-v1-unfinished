@@ -7,6 +7,22 @@ const btnResume = (e) =>{
 }
 
 class NavBar extends React.Component{
+    nav = document.getElementsByClassName('nav');
+
+    setHighlight(){
+        for (let navItem of this.nav) navItem.classList.remove('current');
+        const current = document.getElementById(this.props.page);
+        current.classList.add('current');
+    }
+
+    componentDidMount(){
+        this.setHighlight();
+    }
+
+    componentDidUpdate(){
+        this.setHighlight();
+    }
+
     render(){
         return(
             <header id='header'>
@@ -21,11 +37,11 @@ class NavBar extends React.Component{
                 </a>
                 <nav>
                     <ul>
-                        <li className="current"><a href="/">Home</a></li>
-                        <li><a href="/">Portfolio</a></li>
-                        <li><a href="/">About</a></li>
-                        <li><a href="/">Contact</a></li>
-                        <li><a href="/">Blog</a></li>
+                        <li id="nav-home" className="nav current"><a href="/#home">Home</a></li>
+                        <li id="nav-portfolio" className="nav"><a href="/#portfolio">Portfolio</a></li>
+                        <li id="nav-about" className="nav"><a href="/#about">About</a></li>
+                        <li id="nav-contact" className="nav"><a href="/#contact">Contact</a></li>
+                        <li id="nav-blog" className="nav"><a href="/blog">Blog</a></li>
                     </ul>
                 </nav>
                 <div id="social">

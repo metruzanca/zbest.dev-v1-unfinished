@@ -9,6 +9,11 @@
   --color-purple:#6057E5;
 }
 
+html {
+  scroll-behavior: smooth;
+  // scroll-snap-align: 
+}
+
 body{
   background-color: #211E31;
   background: url("/img/hero.jpg") fixed no-repeat;
@@ -19,22 +24,25 @@ body{
   overflow-x: hidden;
 }
 
+// THIS IS A TEMPORARY STYLE
 .content {
   background-color: #211E31;
-  height: 300vh;
+  height: 150vh;
   width: 100vw;
   display: inline-block;
   /*border-bottom: 5px solid #6057E5;*/
 }
 
-.contact{
+
+
+#contact{
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.contact .form {
+#contact .form {
   margin: 15% 0;
   height: 70%;
   width: 50%;
@@ -111,3 +119,7 @@ footer {
   font-weight: normal;
 }
 //https://mdbootstrap.com/docs/jquery/navigation/footer/
+
+.content{
+  padding: 60px 10px 0 10px;
+}

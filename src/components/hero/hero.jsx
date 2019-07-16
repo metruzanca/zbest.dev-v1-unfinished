@@ -1,27 +1,9 @@
 import React from 'react'
-import { InView } from 'react-intersection-observer';
 import './hero.css';
 
-
-
-
-
 const Hero = () => {
-
-
-    const monitor = (inView) =>{
-        const nav = document.getElementById('header');
-        // console.log('Inview:', inView);
-        if(!inView){
-            nav.classList.add('nav-scrolled');
-        } else {
-            nav.classList.remove('nav-scrolled');
-        }
-    }
  
     return (
-    <InView as="div" className="hero-section" onChange={monitor}>
-        <div id="background"/>
         <div className="hero-headers">
             <h1>Hello, I'm 
                 <span> Samuele <svg xmlns="http://www.w3.org/2000/svg" width="19.74588" height="31.7779" viewBox="0 -6 25.644 41.27">
@@ -33,27 +15,8 @@ const Hero = () => {
             </svg>anca</span></h1>
             <h2>I'm a Full-Stack Developer</h2>
             <h1 style={{color:"#DF054F"}}> Site Under Construction!!</h1>
-            {console.log()}
         </div>
-    </InView>
-    )
+    );
 }
 
-
-// const action = {
-//     color: "#80FFCF",
-//     border: "2px solid #80FFCF",
-//     borderRadius: "10%",
-//     padding: "20px",
-//     fontSize:"1.25rem"
-
-// }
-
-// class Hero extends React.Component{
-//     render(){
-//         return(
-            
-//         )
-//     }
-// }
 export default Hero;
