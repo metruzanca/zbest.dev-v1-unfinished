@@ -1,0 +1,24 @@
+.project-grid{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    border: 1px solid white;
+}
+
+/* Filter Items */
+.filter-item{
+    color:#C5C1B9;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+}
+.filter-item:hover{
+    color:#80FFCF;
+}
+.added{
+    color:#F6DF4C;
+}
+.added:hover{
+    color:#DF054F;
+    text-decoration: line-through;
+}

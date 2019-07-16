@@ -1,8 +1,14 @@
 import React from 'react';
 
-const FilterItem = () =>{
+/**
+ * Might be better to use a ul>li
+ */
+
+const FilterItem = (props) =>{
     return (
-        <div></div>
+        <>
+            <span className="filter-item" key={props.index}>{props.item}</span> {' '}
+        </>
     );
 }
 
