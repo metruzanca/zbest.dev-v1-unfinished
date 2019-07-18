@@ -6,19 +6,41 @@ import FilterItem from './filterItem';
  */
 
 // Temp
-const text = ['nodejs', 'javascript', 'java', 'react'];
 
+class Filter extends React.Component{
+    constructor(){
+        super();
+        this.state = {
+            isFiltered: {
+                'nodejs': false,
+                'javascript': false,
+                'java': false,
+                'react': false,
+            }
+        }
+    }
 
-const Filter = () => {
-    return (
-        <>
-            {text.map((item, index) => (
-                <FilterItem key={index} item={item }/>
-            ))}
-            <span className="filter-item added">Added Item Test</span>
-
-        </>
-    );
+    handleClick = (e, id) =>{
+        this.setState((state, props) =>{
+            state.isFiltered[id] = !this.state.isFiltered[id];
+            return state;
+        });
+    }
+    render(){
+        const items = Object.keys(this.state.isFiltered)
+        return (
+            <div className="filter">
+                {items.map((item, index) => (
+                    <FilterItem
+                        key = {index}
+                        item = {item}
+                        handleClick = {(e, id) => this.handleClick(e, id)}
+                        isFiltered={this.state.isFiltered[item]}
+                    />
+                ))}
+            </div>
+        );
+    }
 }
 
 export default Filter;

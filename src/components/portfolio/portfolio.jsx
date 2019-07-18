@@ -8,9 +8,11 @@ const portfolio = () => {
 
     return (
         <>
-        <h1>Portfolio</h1>
-        <Filter/>
-        <ProjectGrid/>
+            <h1>Portfolio</h1>
+            <div className="portfolio">
+                <Filter/>
+                <ProjectGrid/>
+            </div>
         </>
     )
 }
