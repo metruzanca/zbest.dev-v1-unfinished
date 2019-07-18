@@ -7,16 +7,11 @@ import Filter from './filter';
 const portfolio = () => {
 
     return (
-        <div className="content">
-            <h1>Portfolio</h1>
-            <ProjectGrid/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <Filter/>
-        </div>
+        <>
+        <h1>Portfolio</h1>
+        <Filter/>
+        <ProjectGrid/>
+        </>
     )
 }
 export default portfolio;
