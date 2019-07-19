@@ -5,6 +5,7 @@ import Hero from './components/hero/hero';
 import Bar from './components/bar';
 import Portfolio from './components/portfolio/portfolio';
 import Contact from './components/contact/contact';
+import Quotes from './components/quotes/quotes';
 
 import { InView } from 'react-intersection-observer';
 
@@ -49,6 +50,9 @@ class App extends React.Component {
         <InView threshold={threshold} as="div" id="portfolio" onChange={this.monitor}>
           <Portfolio/>
         </InView>
+
+        <Quotes/>
+
         <InView threshold={threshold} as="div" id="about" onChange={this.monitor} className="content">
           About me
         </InView>

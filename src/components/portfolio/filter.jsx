@@ -30,6 +30,7 @@ class Filter extends React.Component{
         const items = Object.keys(this.state.isFiltered)
         return (
             <div className="filter">
+            {/* Add a selected items div or something */}
                 {items.map((item, index) => (
                     <FilterItem
                         key = {index}

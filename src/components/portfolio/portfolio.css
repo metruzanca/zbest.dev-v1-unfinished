@@ -1,7 +1,12 @@
+#portfolio{
+    padding-top: 80px;
+}
+
 .portfolio{
+    padding-top: 20px;
     display: grid;
     grid-template-columns: 1fr 5fr;
-    grid-gap: 20px;
+    grid-gap: 20px 10px;
     margin: 0 3%;
 }
 
@@ -17,10 +22,20 @@
     border: 1px solid white;
 }
 
+.project-title{
+    padding-top: 30px;
+}
+
 .project{
     height: 250px;
     width: 250px;
-    border: 1px solid green;
+    border: 5px solid #6057E5;
+}
+
+.project-info{
+    width: 100%;
+    background-color: #fff;
+    height: 75%;
 }
 
 /* Filter Items */
@@ -45,17 +60,33 @@
     color:#F6DF4C;
 }
 
-p[isfiltered]{
+/* p[isfiltered]{
     color:#F6DF4C;
 }
 
 p[isfiltered]:hover{
     color:#DF054F;
     text-decoration: line-through;
-}
+} */
 .added:hover{
     color:#DF054F;
     text-decoration: line-through;
+}
+
+
+
+/* .filter-item::after{
+    text-decoration:none;
+    font-size: 16px;
+    content: '+';
+    color:white;
+} */
+
+.added::after{
+    text-decoration:none;
+    font-size: 16px;
+    content: '×';
+    color:white;
 }
 
 /* 
