@@ -6,6 +6,10 @@ const btnResume = (e) =>{
     
 }
 
+/**
+ * TODO: need to add state to this component instead of modifying the style thru the main app.
+ */
+
 class NavBar extends React.Component{
     nav = document.getElementsByClassName('nav');
 
