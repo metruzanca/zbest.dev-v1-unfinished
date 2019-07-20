@@ -1,7 +1,8 @@
 import React from 'react';
+import { BrowserRouter as Router, Switch, Link, Route} from 'react-router-dom';
 import Landing from './landing.jsx';
-import Blog from './blog.jsx';
-import { BrowserRouter as Router, Link, Route} from 'react-router-dom';
+import Blog from './Blog.jsx';
+import ErrorCode from './ErrorCode.jsx';
 
 class App extends React.Component {
 
@@ -15,8 +16,11 @@ class App extends React.Component {
   render(){
     return (
       <Router>
-      <Route exact path="/" component={() =>(<Landing page={this.state.nav}/>)} />
-      <Route exact path="/blog" component={Blog} />
+        <Switch>
+          <Route exact path="/" component={() =>(<Landing page={this.state.nav}/>)} />
+          <Route exact path="/blog" component={Blog} />
+          <Route component={() =>(<ErrorCode code="404" message="Page Not Found."/>)} />
+        </Switch>
       </Router>
     );
   }

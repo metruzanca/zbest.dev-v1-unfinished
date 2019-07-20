@@ -80,7 +80,15 @@ footer h2::after {
   left: 25%;
   right: 25%;
   bottom: 0;
-  border: 1px solid red;
+  border: 1px solid #80FFCF;
+}
+
+a{
+  color:#C5C1B9;
+}
+
+a:hover{
+  color: #80FFCF;
 }
 
 footer a {

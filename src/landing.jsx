@@ -51,7 +51,12 @@ class Landing extends React.Component{
           <Portfolio/>
         </InView>
         <InView threshold={this.threshold} as="div" id="about" onChange={this.monitor} className="content">
-          About me
+          <h1>About me</h1>
+          <p>
+            My main goal in life is: "To become The Best version of myself".<br/>
+            My domain is a constant reminder to what I strive to become.<br/>
+            <i>(Also its a pun that i got from my dad)</i>
+          </p>
           <Quotes/>
         </InView>
         <InView threshold={this.threshold} as="div" id="contact" onChange={this.monitor}>
