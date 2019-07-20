@@ -23,7 +23,7 @@ plan.target('production', [
   // }
 ]);
  
-plan.local(local =>  {
+plan.local(['default'],local =>  {
   local.log('Building React production build...');
   local.exec('sudo npm run build', {silent: true});
  
@@ -34,7 +34,7 @@ plan.local(local =>  {
   local.transfer(filesToCopy, `/tmp/${tmpDir}`);
 });
  
-plan.remote(remote => {
+plan.remote(['default'],remote => {
 
   remote.log('Move folder to web root');
   remote.sudo(`cp -R /tmp/${tmpDir} ~/`, {user: user, silent: true});
@@ -45,7 +45,14 @@ plan.remote(remote => {
   // remote.sudo('pm2 reload example-com', {user: user});
 });
  
-plan.local(local => {
+plan.local(['default'],local => {
       local.log('Done! http://zbest.dev/');
 });
 // plan.remote( remote => {});
+
+plan.remote(['rollback'], remote =>{
+  //ls -At | grep zbest.dev- | sed -n 2p
+  const test = remote.exec('ls -At | grep zbest.dev- | sed -n 2p');
+  remote.log(test.stdout)
+  remote.sudo(`ln -snf ~/${test.stdout} "zbest.dev"`, {user: user, silent: true});
+})
