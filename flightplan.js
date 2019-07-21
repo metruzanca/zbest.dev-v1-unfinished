@@ -37,12 +37,12 @@ plan.local(['default'],local =>  {
 plan.remote(['default'],remote => {
 
   remote.log('Move folder to web root');
-  remote.sudo(`cp -R /tmp/${tmpDir} ~/`, {user: user, silent: true});
+  remote.sudo(`cp -R /tmp/${tmpDir} ~/zbest.dev/`, {user: user, silent: true});
   remote.rm(`-rf /tmp/${tmpDir}`);
  
   // remote.log('Reload application');
-  remote.sudo(`ln -snf ~/${tmpDir} zbest.dev`, {user: user, silent: true});
-  // remote.sudo('pm2 reload example-com', {user: user});
+  remote.sudo(`ln -snf ~/zbest.dev/${tmpDir} ~/zbest.dev/frontend`, {user: user, silent: true});
+  remote.sudo('pm2 reload zbest-dev-frontend', {user: user});
 });
  
 plan.local(['default'],local => {
@@ -50,9 +50,10 @@ plan.local(['default'],local => {
 });
 // plan.remote( remote => {});
 
-plan.remote(['rollback'], remote =>{
-  //ls -At | grep zbest.dev- | sed -n 2p
-  const test = remote.exec('ls -At | grep zbest.dev- | sed -n 2p');
-  remote.log(test.stdout)
-  remote.sudo(`ln -snf ~/${test.stdout} "zbest.dev"`, {user: user, silent: true});
-})
+
+// plan.remote(['rollback'], remote =>{
+//   //ls -At | grep zbest.dev- | sed -n 2p
+//   const test = remote.exec('ls -At | grep zbest.dev- | sed -n 2p');
+//   remote.log(test.stdout)
+//   remote.sudo(`ln -snf ~/${test.stdout} "zbest.dev"`, {user: user, silent: true});
+// })

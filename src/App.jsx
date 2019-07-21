@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Link, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, /*Link,*/ Route} from 'react-router-dom';
 import Landing from './landing.jsx';
 import Blog from './Blog.jsx';
 import ErrorCode from './ErrorCode.jsx';
