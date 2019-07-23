@@ -17,8 +17,7 @@ class Blog extends React.Component {
 		fetch('/api/portfolio')
 		.then(res => res.json())
 		.then(posts => {
-			// this.setState({posts})
-			console.log(posts);
+			this.setState({posts})
 		})
 	}
 
@@ -27,8 +26,8 @@ class Blog extends React.Component {
 			<>
       	<NavBar page="nav-blog"/>
       	<Bar/>
-				Hello there!
-      	<Feed/>
+      	<h1>My garbage blog</h1>
+      	<Feed posts={this.state.posts}/>
       	<Footer/>
 			</>
 		)

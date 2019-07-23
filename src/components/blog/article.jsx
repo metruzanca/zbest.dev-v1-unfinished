@@ -1,8 +1,12 @@
 import React from 'react';
 
-const Article = () =>{
+const Article = ({key, title, body, tags }) =>{
 	return(
-		<div>Single Article</div>
+		<div>
+			<h1>{title}</h1>
+			<p>{body}</p>
+			<h5>{tags}</h5>
+		</div>
 	)
 }
 

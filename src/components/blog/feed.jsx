@@ -1,14 +1,12 @@
 import React from 'react';
 import Article from './article';
 
-const Feed = () =>{
+const Feed = ({posts}) =>{
 	return(
 		<div>
-			Blog Feed
-			<Article/>
-			<Article/>
-			<Article/>
-			<Article/>
+			{posts.map(post => (
+				<Article key={post.id} body={post.body} title={post.title} tags={post.tags}/>
+				))}
 		</div>
 	)
 }
