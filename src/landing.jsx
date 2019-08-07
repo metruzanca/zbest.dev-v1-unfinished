@@ -57,6 +57,10 @@ class Landing extends React.Component{
             My domain is a constant reminder to what I strive to become.<br/>
             <i>(Also its a pun that i got from my dad)</i>
           </p>
+          <figure>
+             {/* Wakatime Embed */}
+            <embed src="https://wakatime.com/share/@9f8d80c3-f466-4a54-884b-414b8bf37f5b/a7327f7e-8ceb-4b68-ae85-d580a8d7c5c4.svg"></embed>
+          </figure>
           <Quotes/>
         </InView>
         <InView threshold={this.threshold} as="div" id="contact" onChange={this.monitor}>
