@@ -2,6 +2,8 @@
 #portfolio{
     padding-top: 80px;
     --Red: #DF054F;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .portfolio{
@@ -34,6 +36,7 @@
     width: var(--ProjectSize);
     border: 5px solid #6057E5;
     background-color: #181521;
+    position: relative;
 }
 
 .project.show {

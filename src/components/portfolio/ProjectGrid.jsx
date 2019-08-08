@@ -12,10 +12,11 @@ console.log(projects)
         	{projects.map((project, index) =>(
             	<Project
 					key={project.id}
+					tags={project.tags}
 					className={'project show ' + project.tags.join(' ')}
             		title={project.title}
             		description={project.description}
-            		repository={project.repository}
+            		code={project.code}
             		live={project.live}
             	/>
         	))}
