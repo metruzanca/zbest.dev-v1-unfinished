@@ -9,38 +9,77 @@ const projects = [
 	title:"Personal Finance Tools",
 	description:"",
 	repository:"",
-	live:"http://zbest.dev/financetracker"
+	live:"http://zbest.dev/financetracker",
+	tags:['javascript', 'reactjs', 'expressjs']
 },
 {
 	id:1,
-	title:"Discorc Bot",
+	title:"Discord Bot",
 	description:"placeholder placeholder placeholder placeholder placeholder",
 	repository:"",
-	live:""
+	live:"",
+	tags: ['nodejs']
 },
 {
 	id:2,
 	title:"Process Manager",
 	description:"placeholder placeholder placeholder placeholder placeholder",
 	repository:"",
-	live:""
+	live:"",
+	tags: ['javascript', 'nodejs', 'express']
 },
 {
 	id:3,
 	title:"placeholder",
 	description:"placeholder placeholder placeholder placeholder placeholder",
 	repository:"",
-	live:""
+	live:"",
+	tags: ['javascript']
 }
 ]
 
-const portfolio = () => {
+const categories = {
+	languages: [
+		{
+			name: 'nodejs',
+			icon: ''
+		},
+		{
+			name: 'javascript',
+			icon: ''
+		},
+		// {
+		// 	name: 'java',
+		// 	icon: ''
+		// },
+		// {
+		// 	name: 'python',
+		// 	icon: ''
+		// }
+	],
+	frameworks: [
+		{
+			name: 'reactjs',
+			icon: ''
+		},
+		{
+			name: 'discordjs',
+			icon: ''
+		},
+		{
+			name: 'expressjs',
+			icon: ''
+		}
+	]
+}
+
+const portfolio = () => {	
 
     return (
         <>
             <h1>Portfolio</h1>
             <div className="portfolio">
-                <Filter/>
+				<Filter categories={categories}/>
                 <ProjectGrid projects={projects}/>
             </div>
         </>

@@ -1,38 +1,42 @@
 import React from 'react';
 
-/**
-* Might be better to use a ul>li
-*/
-
-
 class FilterItem extends React.Component {
     constructor(props){
         super();
         this.state = {item:props.isFiltered};
     }
 
+    filterSelection = (filter, button) => {
+        const projects = document.getElementsByClassName('project');
+
+        const btns = document.getElementsByClassName('filter-item');
+
+        for (const btn of btns) {
+            btn.classList.remove('active');
+        }
+        button.classList.toggle('active', true);
+
+        if (!filter) {            
+            for (const project of projects){
+                project.classList.add("show")
+            }
+            return;
+        }
+
+        for (const project of projects) {
+            project.classList.remove("show");
+            if (project.classList.contains(filter)) project.classList.add("show");
+        }
+    }
+
     render(){
 
         return (
-            <>
-            {/* <p 
-                className="filter-item"
-                isfiltered={this.props.isFiltered ? 'true' : undefined}
-                onClick={(e) => this.props.handleClick(e, this.props.item)}
-            >
-                {this.props.item}
-            </p>
-            {' '} */}
-                <div /*className={this.props.isFiltered ? 'added' : ''}*/>
-                <span 
-                    className={`filter-item ${this.props.isFiltered ? 'added' : ''}`}
-                    onClick={(e) => this.props.handleClick(e, this.props.item)}
-                    >
-                    {this.props.item}
-                </span>
-            </div>
-            {' '}
-            </>
+            <span 
+                className={this.props.className}
+                onClick={(event) => this.filterSelection(this.props.arg ? '':event.target.innerHTML, event.target)}
+            >{this.props.item}
+            </span>
         );
     }
 }

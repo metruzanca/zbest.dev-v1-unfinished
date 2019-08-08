@@ -11,8 +11,8 @@ console.log(projects)
         <div className="project-grid">
         	{projects.map((project, index) =>(
             	<Project
-            		className="project"
-            		key={project.id}
+					key={project.id}
+					className={'project show ' + project.tags.join(' ')}
             		title={project.title}
             		description={project.description}
             		repository={project.repository}

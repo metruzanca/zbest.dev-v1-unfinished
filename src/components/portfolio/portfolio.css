@@ -1,5 +1,7 @@
+
 #portfolio{
     padding-top: 80px;
+    --Red: #DF054F;
 }
 
 .portfolio{
@@ -10,17 +12,14 @@
     margin: 0 3%;
 }
 
-.filter{
-    border: 1px solid red;
-    width: 200px;
-}
-
 .project-grid{
     --ProjectSize: 300px;
-    display: grid;
+    /* display: grid;
     grid-gap: 20px;
     grid-template-columns: repeat(auto-fill, minmax(var(--ProjectSize), 1fr));
-    border: 1px solid white;
+    border: 1px solid white; */
+    /* For filter */
+    overflow: hidden;
 }
 
 .project-title{
@@ -28,10 +27,17 @@
 }
 
 .project{
+    float: left;
+    display: none;
+    margin: 2px;
     height: var(--ProjectSize);
     width: var(--ProjectSize);
     border: 5px solid #6057E5;
     background-color: #181521;
+}
+
+.project.show {
+    display: block;
 }
 
 .project-info{
@@ -44,9 +50,10 @@
 /* Filter Items */
 .filter-item{
     color:#C5C1B9;
+    display: block;
     text-transform: uppercase;
-    font-weight: 600;
-    font-size: 12px;
+    font-weight: 500;
+    font-size: 16px;
     cursor: pointer;
     /* Unselectable */
     -webkit-touch-callout: none;
@@ -55,44 +62,11 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    padding-left: 15px;
 }
 .filter-item:hover{
     color:#80FFCF;
 }
-.added{
+.filter-item.active{
     color:#F6DF4C;
 }
-
-/* p[isfiltered]{
-    color:#F6DF4C;
-}
-
-p[isfiltered]:hover{
-    color:#DF054F;
-    text-decoration: line-through;
-} */
-.added:hover{
-    color:#DF054F;
-    text-decoration: line-through;
-}
-
-
-
-/* .filter-item::after{
-    text-decoration:none;
-    font-size: 16px;
-    content: '+';
-    color:white;
-} */
-
-.added::after{
-    text-decoration:none;
-    font-size: 16px;
-    content: '×';
-    color:white;
-}
-
-/* 
-div.added{
-    border: 1px solid blue;
-} */
