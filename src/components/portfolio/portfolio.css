@@ -50,7 +50,7 @@
 /* Filter Items */
 .filter-item{
     color:#C5C1B9;
-    display: block;
+    /* display: block; */
     text-transform: uppercase;
     font-weight: 500;
     font-size: 16px;

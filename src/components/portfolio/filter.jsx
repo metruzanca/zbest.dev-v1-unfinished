@@ -3,8 +3,7 @@ import FilterItem from './filterItem';
 
 const Filter = (props) => {
     
-    const { languages, frameworks } = props.categories;
-    console.log(languages);
+    const categories = props.categories;
     
     return (
         <div className="filter">
@@ -14,22 +13,24 @@ const Filter = (props) => {
                 item="Show all"
                 arg
             />
-            <h4>Languages</h4>
-            {languages.map((categorie, index) => (
-                <FilterItem
-                    key = {index}
-                    className="filter-item"
-                    item={categorie.name}
-                />
-            ))}
-            <h4>Frameworks</h4>
-            {frameworks.map((categorie, index) => (
-                <FilterItem
-                    key={index}
-                    className="filter-item"
-                    item={categorie.name}
-                />
-            ))}
+
+            {Object.keys(categories).map( key => {
+                return (
+                    <>
+                        <h4>{key}</h4>
+                        {categories[key].map((category, index) =>
+                            <>
+                                <FilterItem
+                                    key={index}
+                                    className="filter-item"
+                                    item={category.name}
+                                />
+                                <br />
+                            </>
+                        )}
+                    </>
+                )
+            })}
         </div>
     )
 }

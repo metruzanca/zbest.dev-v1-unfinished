@@ -18,7 +18,7 @@ const projects = [
 	description:"placeholder placeholder placeholder placeholder placeholder",
 	repository:"",
 	live:"",
-	tags: ['nodejs']
+	tags: ['nodejs', 'discordjs']
 },
 {
 	id:2,
@@ -39,7 +39,7 @@ const projects = [
 ]
 
 const categories = {
-	languages: [
+	Languages: [
 		{
 			name: 'nodejs',
 			icon: ''
@@ -57,7 +57,7 @@ const categories = {
 		// 	icon: ''
 		// }
 	],
-	frameworks: [
+	Frameworks: [
 		{
 			name: 'reactjs',
 			icon: ''
