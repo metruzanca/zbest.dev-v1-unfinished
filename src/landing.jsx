@@ -51,17 +51,22 @@ class Landing extends React.Component{
           <Portfolio/>
         </InView>
         <InView threshold={this.threshold} as="div" id="about" onChange={this.monitor} className="content">
-          <h1>About me</h1>
-          <p>
-            My main goal in life is: "To become The Best version of myself".<br/>
-            My domain is a constant reminder to what I strive to become.<br/>
-            <i>(Also its a pun that i got from my dad)</i>
-          </p>
-          <figure>
-             {/* Wakatime Embed */}
-            <embed src="https://wakatime.com/share/@9f8d80c3-f466-4a54-884b-414b8bf37f5b/a7327f7e-8ceb-4b68-ae85-d580a8d7c5c4.svg"></embed>
-          </figure>
-          <Quotes/>
+          <div id="about-me">
+            <h1>About me</h1>
+            <p>
+              My main goal in life is: "To become The Best version of myself".<br />
+              My domain is a constant reminder to what I strive to become.<br />
+            </p>
+            <br/>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis officiis sed, facilis vitae soluta commodi itaque perspiciatis, doloremque unde optio non facere ipsa deserunt asperiores autem at accusantium inventore? Aperiam?</p>
+            <br/>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis officiis sed, facilis vitae soluta commodi itaque perspiciatis, doloremque unde optio non facere ipsa deserunt asperiores autem at accusantium inventore? Aperiam?</p>
+          </div>
+          <div id="wakatime">
+            <figure>
+              <embed src="https://wakatime.com/share/@9f8d80c3-f466-4a54-884b-414b8bf37f5b/e861b466-c76e-45d2-8fae-7482227a064c.svg"/>
+            </figure>
+          </div>
         </InView>
         <InView threshold={this.threshold} as="div" id="contact" onChange={this.monitor}>
           <Contact/>
